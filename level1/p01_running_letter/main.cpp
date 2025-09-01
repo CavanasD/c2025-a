@@ -3,7 +3,7 @@
 
 using namespace std;
 
-static const int width = 70;
+const int width = 70;
 
 int main() {
     int maxwidth = width - 1;
