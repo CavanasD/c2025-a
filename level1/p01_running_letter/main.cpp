@@ -1,21 +1,25 @@
 #include <iostream>
-#include <thread>
-#include <chrono>
+#include <thread>#include <chrono>
+
+using namespace std;
+
+static const int width = 70;
 
 int main() {
-    std::string word = "A";
-    int width = 60;
-    int MaxRightW = width - (int)word.size();
-    int pos = 0;
+    int maxwidth = width - 1;
+    int position = 0;
     int dir = 1;
-
     while (true) {
-        std::cout << "\r" << std::string(width, ' ');
-        std::cout << "\r" << std::string(pos, ' ') << word << std::flush;
+        cout<<"\r" << string(position, ' ') << "A" << flush;
+        system("cls");
+        position += dir;
+        if (position >= maxwidth) {
+            maxwidth = position;dir = -1;
+        }
+        else if (position <= 0) {
+            position = 0; dir = 1;
+        }
 
-        std::this_thread::sleep_for(std::chrono::milliseconds(50));
-        pos += dir;
-        if (pos >= MaxRightW) { pos = MaxRightW; dir = -1; }
-        else if (pos <= 0) { pos = 0; dir = 1; }
+
     }
 }
