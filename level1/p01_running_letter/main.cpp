@@ -1,5 +1,5 @@
 #include <iostream>
-#include <thread>#include <chrono>
+#include <chrono>
 
 using namespace std;
 
@@ -8,18 +8,16 @@ static const int width = 70;
 int main() {
     int maxwidth = width - 1;
     int position = 0;
-    int dir = 1;
+    int direction = 1;
     while (true) {
-        cout<<"\r" << string(position, ' ') << "A" << flush;
+        cout<<"\r" << string(position, ' ') << "A" ;
         system("cls");
-        position += dir;
+        position += direction;
         if (position >= maxwidth) {
-            maxwidth = position;dir = -1;
+            maxwidth = position;direction = -1;
         }
         else if (position <= 0) {
-            position = 0; dir = 1;
+            position = 0; direction = 1;
         }
-
-
     }
 }
