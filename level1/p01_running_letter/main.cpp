@@ -10,7 +10,7 @@ int main() {
     int position = 0;
     int direction = 1;
     while (true) {
-        cout<<"\r" << string(position, ' ') << "A" ;
+        cout << string(position, ' ') << "A" ;
         system("cls");
         position += direction;
         if (position >= maxwidth) {
