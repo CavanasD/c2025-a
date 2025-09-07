@@ -1,6 +1,7 @@
 #include <iostream>
 #include <chrono>
 using namespace std;
+using namespace chrono;
 
 int isPrime(int n) {
     for (int i = 2; i * i <= n; i++) {
@@ -12,9 +13,8 @@ int isPrime(int n) {
 }
 
 int main() {
-     //Print the calculate time
-
-
+     //Rec the calculating time
+    auto start = high_resolution_clock::now();
     int count = 0;
     for (int i = 2; i <= 1000; i++) {
         if (isPrime(i) == 1 ) {
@@ -25,5 +25,9 @@ int main() {
             }
         }
     }
+    auto end = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(end - start);
+    cout << "\n\n>>>>>运行时间: " << duration.count() << " μs<<<<<" << endl;
+
     return 0;
 }
