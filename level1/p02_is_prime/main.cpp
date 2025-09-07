@@ -8,9 +8,8 @@ int main() {
     cin >> k;
     for (int i = 2 ; i <= k; i++) {
         if (k % i == 0) {
-            cout << k << "tmd不是素数" << endl;
+            cout << k << " tmd不是素数" << endl;
             return 1;
-
         }
         cout << k << " isPrime" << endl;
         return 0;

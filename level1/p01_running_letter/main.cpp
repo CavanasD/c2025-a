@@ -14,10 +14,12 @@ int main() {
         system("cls");
         position += direction;
         if (position >= MaxWidth) {
-            MaxWidth = position;direction = -1;
+            MaxWidth = position;
+            direction = -1;
         }
         else if (position <= 0) {
-            position = 0; direction = 1;
+            position = 0;
+            direction = 1;
         }
     }
 }
