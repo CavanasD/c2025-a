@@ -10,7 +10,7 @@ add_executable(p02_is_prime level1/p02_is_prime/main.cpp)
 
 add_executable(p03_all_primes level1/p03_all_primes/main.cpp)
 
-add_executable(p04_goldbach  level1/p04_goldbach/main.c)
+add_executable(p04_goldbach level1/p04_goldbach/main.cpp)
 
 add_executable(p05_encrypt_decrypt  level1/p05_encrypt_decrypt/main.c)
 
