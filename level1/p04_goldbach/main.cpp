@@ -11,12 +11,9 @@ bool isPrime(int n) {
 }
 
 int main() {
-    cout << "========================" << endl;
-
     // 验证4到100的所有偶数
     for (int n = 4; n <= 100; n += 2) {
         bool found = false;
-
         // 寻找两个质数的和等于n
         for (int i = 2; i <= n/2; i++) {
             if (isPrime(i) && isPrime(n - i)) {
@@ -25,14 +22,10 @@ int main() {
                 break;
             }
         }
-
         if (!found) {
-            cout << "❌ " << n << " 无法表示为两个质数之和！" << endl;
+            cout << "Wrong！" << n << "It can't be divided!" << endl;
         }
     }
-
-    cout << "========================" << endl;
-    cout << "验证完成！100以内所有偶数都满足哥德巴赫猜想" << endl;
-
+    cout << "Success" << endl;
     return 0;
 }
