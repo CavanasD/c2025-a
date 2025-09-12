@@ -12,7 +12,9 @@ add_executable(p03_all_primes level1/p03_all_primes/main.cpp)
 
 add_executable(p04_goldbach level1/p04_goldbach/main.cpp)
 
-add_executable(p05_encrypt_decrypt  level1/p05_encrypt_decrypt/main.c)
+add_executable(p05_encrypt_decrypt level1/p05_encrypt_decrypt/main.cpp
+        level1/p05_encrypt_decrypt/main.cpp
+        level1/p05_encrypt_decrypt/main.cpp)
 
 add_executable(p06_hanoi  level1/p06_hanoi/main.c)
 
