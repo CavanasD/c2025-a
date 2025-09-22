@@ -39,7 +39,7 @@ Node* reverseList(Node* head) {
     return prev; // 新的头节点
 }
 
-// 查找值为 target 的节点，返回序号，未找到返回 -1
+// 查找值为 target 的节点
 int findValue(Node* head, int target, int startIndex) {
     Node* p = head;
     int index = 0;
