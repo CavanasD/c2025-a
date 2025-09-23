@@ -6,10 +6,10 @@
 using namespace std;
 
 const int MAZE_WIDTH  = 40;
-const int MAZE_HEIGHT = 20;
+const int HEIGHT = 20;
 
 // 每行长度严格为 40
-char mazeMap[MAZE_HEIGHT][MAZE_WIDTH + 1] = {
+char mazeMap[HEIGHT][MAZE_WIDTH + 1] = {
     "########################################",
     "#     #   #   ###     #     #    #    E#",
     "### ### ##### ### ### ### ##### ### ####",
@@ -38,7 +38,7 @@ int exitX = 38, exitY = 1;
 void drawMazeMap() {
     //cls to animation
     system("cls");
-    for (int y = 0; y < MAZE_HEIGHT; ++y) {
+    for (int y = 0; y < HEIGHT; ++y) {
         for (int x = 0; x < MAZE_WIDTH; ++x) {
             if (x == playerPosX && y == playerPosY) {
                 cout << 'P';
@@ -51,9 +51,10 @@ void drawMazeMap() {
 }
 
 bool canMoveTo(int x, int y) {
-    if (x < 0 || x >= MAZE_WIDTH || y < 0 || y >= MAZE_HEIGHT) return false;
+    if (x < 0 || x >= MAZE_WIDTH || y < 0 || y >= HEIGHT) return false;
     char c = mazeMap[y][x];
-    return c != '#';
+    return c !='#';
+
 }
 
 void handleInput() {
