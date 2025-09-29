@@ -80,7 +80,6 @@ int main() {
     // 查找下一个值为5的节点（从上一个索引+1开始）
     int nextIndex = findValue(head, 5, firstIndex + 1);
     printf("Next 5 addr: %d\n", nextIndex);
-    // 释放链表
     freeList(head);
     return 0;
 }

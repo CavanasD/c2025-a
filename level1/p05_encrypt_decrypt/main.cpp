@@ -55,8 +55,7 @@ string toHex(const string &str) {
 string fromHex(const string& hexStr) {
     string result = "";
     if (hexStr.length() % 2 != 0) {
-        cout << "Error: Hex string  must have an even number of characters." << endl;
-        string.length = result.length();
+        cout << "Error: Hex string must have an even number of characters." << endl;
         return ""; // 返回空字符串表示失败
     }
     for (size_t i = 0; i < hexStr.length(); i += 2) {
