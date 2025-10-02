@@ -24,4 +24,13 @@ add_executable(p08_push_boxes level1/p08_push_boxes/main.cpp)
 
 add_executable(p09_linked_list level1/p09_linked_list/main.cpp)
 
-add_executable(p10_warehouse level1/p10_warehouse/main.cpp)
+add_executable(p10_warehouse level1/p10_warehouse/main.cpp
+        level1/p10_warehouse/WareHouse.h
+        level1/p10_warehouse/Item.h
+        level1/p10_warehouse/WareHouse.cpp
+)
+
+add_executable(NeuralNetworks level2/LOOK-AT-ME.cpp
+        level2/NeuralNetworks/LOOK-AT-ME.cpp
+        level2/NeuralNetworks/main.cpp
+)
