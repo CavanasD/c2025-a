@@ -10,14 +10,12 @@ void stepHanoi(int n, char A, char C, char B) {
         cout << A << " -> " << C << endl;
         stepHanoi(n-1, C, A, B);
     }
-
 }
 int main() {
     int n = 0;
     cin >> n;
     stepHanoi(n, 'A', 'C', 'B');
     return 0;
-
 }
 /*
 stepHanoi(3, A, C, B)

@@ -32,4 +32,5 @@ add_executable(p10_warehouse level1/p10_warehouse/main.cpp
 
 add_executable(NeuralNetworks
         level2/NeuralNetworks/main.cpp
+        课程设计/awa.cpp
 )
